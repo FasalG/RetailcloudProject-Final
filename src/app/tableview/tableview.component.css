@@ -1,0 +1,106 @@
+.container{
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* padding: 0px 9px; */
+    /* background-color: snow; */
+    /* object-fit: contain;
+    overflow: auto; */
+
+   
+}
+
+
+.tableview{
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: scroll;
+    
+   
+}
+
+.tableview th, .tableview td{
+    padding: 10px 15px;
+    border: 1px solid rgb(243, 238, 238);
+    text-align: center;
+    font-size: 15px;
+    max-width: 100%;
+}
+/* @media((max-width:1000px )and (min-width:701px)){
+    .tableview th, .tableview td{
+        padding: 2cqb 2px;
+        border: 1px solid rgb(243, 238, 238);
+        text-align: center;
+        font-size: 11px;
+        max-width: 100%;
+    }  
+} */
+
+
+.tableview th{
+    background-color: snow;
+    color: black
+}
+
+/* .tableview tbody tr:nth-child(even){
+    background-color: #f5f5f5;
+} */
+
+/* respnsive */
+
+@media(max-width:700px){
+
+    .tableview thead{
+        display: none;
+    }
+
+    .tableview .tableview tbody, .tableview tr, .tableview td{
+        display: block;
+        width: 100%;
+    }
+    .tableview tr{
+        margin-bottom: 15px;
+    
+    }
+
+    .tableview td{
+        text-align: right;
+        font-size: 14px;
+        padding-left: 50%;
+        position: relative;
+
+    }
+
+    .tableview td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width:50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+        font-size: 15px;
+    }
+
+}
+
+.download{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+   
+}
+.download button{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}

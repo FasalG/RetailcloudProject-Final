@@ -1,0 +1,28 @@
+<div class="container" >
+    <div class="grid" *ngFor="let data of summarydata">
+        <ul>
+            <li class="district">
+              <h3>{{data.name}}</h3>
+              <ul class="district-data">
+                <li><span>Confirmed:</span><span>{{data.details.confirmed}}</span></li>
+                <li><span>Recovered:</span> <span>{{data.details.recovered}}</span></li>
+                <li><span>Active:</span><span>{{data.details.active}}</span></li>
+                <li><span>Deceased:</span><span>42{{data.details.deceased}}</span></li>
+                <li><span>Total observation:</span><span>{{data.details.home_obs}}</span></li>
+                <li><span>Hospital observation:</span><span>{{data.details.hospital_obs}}</span></li>
+                <li><span>Home observation:</span><span>{{data.details.recovered}}</span></li>
+                <li><span>Hospitality today:</span><span>{{data.details.total_obs}}</span></li>                
+              </ul>
+            </li>           
+          </ul>
+    </div>
+
+  
+
+</div>
+<div class="download">
+    <button type="button" (click)="filedownload()">Download CSV</button>
+</div>
+
+
+

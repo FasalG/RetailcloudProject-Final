@@ -1,0 +1,38 @@
+<div class="container" >
+    <table class="tableview">
+        <thead>
+            <th>District</th>
+            <th>Confirmed</th>
+            <th>Recovered</th>
+            <th>Active</th>
+            <th>Deceased</th>
+            <th>Total observation</th>
+            <th>Hospital observation</th>
+            <th>Home observation</th>
+            <th>Hospitality today</th>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let data of filteredDistricts">
+
+                <td data-label="District">{{data.name}}</td>
+                <td data-label="Confirmed">{{data.details.confirmed}}</td>
+                <td data-label="Recovered">{{data.details.recovered}}</td>
+                <td data-label="Active">{{data.details.active}}</td>
+                <td data-label="Deceased">{{data.details.deceased}}</td>
+                <td data-label="Total observation">{{data.details.home_obs}}</td>
+                <td data-label="Home observation">{{data.details.hospital_obs}}</td>
+                <td data-label="Hospital observation">{{data.details.recovered}}</td>
+                <td data-label="Hospitality today">{{data.details.total_obs}}</td>
+
+
+            </tr>               
+        </tbody>
+       
+</table>
+<div class="download">
+    <button type="button" (click)="filedownload()">Download CSV</button>
+</div>
+
+</div>
+

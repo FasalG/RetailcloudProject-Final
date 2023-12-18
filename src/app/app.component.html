@@ -1,0 +1,39 @@
+<div class="titlediv" style="width: 100%;">
+  <h1 class="title" >Report Data</h1>
+  <button (click)="modalToggle()">Recovery States</button>
+</div>
+
+
+<div class="reportContainer">
+  <div class="buttoncontainer" >
+    <button class="btn"  routerLink="/tableview" routerLinkActive="active-link">Table</button>
+    <button class="btn"  routerLink="/listview"  routerLinkActive="active-link">Grid</button>
+  </div>
+  <div class="panel">
+    <div class="reportpanel" style="width: 100%;">
+        <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+<dialog  [open]="modal" class="modal" id="modal">
+    <div class="closebtn">
+      <button  (click)="modalToggle()">X</button>
+    </div>    
+    <div class="modaldiv">
+        <h5>Please select the district to get recovery status:</h5>
+        
+        <select name="district" id="dropdown"  (change)="selectedDistrict($event)">
+         
+          <option [value]="item.details.recovered" *ngFor="let item of summarydata" >{{item.name}}</option>
+        </select>
+
+        <div class="recoverydet" *ngIf="check">
+            <h1>{{testarray}}</h1>
+            <h2>People Recovered</h2>
+        </div>
+    </div>
+    
+
+</dialog>

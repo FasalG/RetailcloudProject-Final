@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    padding:25px;
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%;
+ 
+
+ 
+    position: relative;
+}
+
+@media(max-width:500px){
+    body{
+        padding: 10px;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+}
